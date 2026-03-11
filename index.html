@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>德州扑克 - Web 版</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="table-wrap">
+    <h1>德州扑克（你 + 电脑玩家）</h1>
+
+    <section class="setup-panel">
+      <label for="aiCount"><strong>电脑玩家数量：</strong></label>
+      <select id="aiCount">
+        <option value="0">0</option>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <small>可选，最多 4 个电脑玩家</small>
+    </section>
+
+    <section class="status-panel">
+      <div><strong>阶段：</strong><span id="street">-</span></div>
+      <div><strong>底池：</strong><span id="pot">0</span></div>
+      <div><strong>当前需跟注：</strong><span id="toCall">0</span></div>
+      <div><strong>当前行动：</strong><span id="turn">-</span></div>
+      <div><strong>信息：</strong><span id="message">点击“新一局”开始。</span></div>
+    </section>
+
+    <section class="board">
+      <h2>公共牌</h2>
+      <div id="communityCards" class="cards"></div>
+    </section>
+
+    <section>
+      <h2>玩家</h2>
+      <div id="playersArea" class="players"></div>
+    </section>
+
+    <section class="controls">
+      <button id="newHandBtn">新一局</button>
+      <button id="checkCallBtn" disabled>过牌 / 跟注</button>
+      <button id="betRaiseBtn" disabled>下注 / 加注 (+20)</button>
+      <button id="foldBtn" disabled>弃牌</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
