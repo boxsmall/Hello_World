@@ -1,5 +1,5 @@
 const SUITS = ["♠", "♥", "♦", "♣"];
-const RANKS = ["2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"];
+const RANKS = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 const STREET_NAMES = ["翻牌前", "翻牌", "转牌", "河牌", "摊牌"];
 const STARTING_CHIPS = 1000;
 const SMALL_BLIND = 10;
