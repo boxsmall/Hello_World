@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+  --bg: #0b3d1f;
+  --panel: #125c2f;
+  --text: #f6fff6;
+  --card-bg: #ffffff;
+  --card-text: #1c1c1c;
+  --red: #c92c2c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+  background: radial-gradient(circle at center, #176f39 0%, var(--bg) 60%);
+  color: var(--text);
+}
+
+.table-wrap {
+  max-width: 980px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 10px;
+}
+
+.status-panel,
+.player,
+.controls,
+.board {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.status-panel {
+  display: grid;
+  gap: 6px;
+}
+
+.players {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.you {
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.cards {
+  display: flex;
+  gap: 8px;
+  min-height: 90px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 62px;
+  height: 88px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--card-text);
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card.red {
+  color: var(--red);
+}
+
+.card.back {
+  background: repeating-linear-gradient(45deg, #2e2e8f, #2e2e8f 8px, #20205e 8px, #20205e 16px);
+  border: 1px solid #11113a;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#newHandBtn {
+  background: #ffd166;
+}
+
+#checkCallBtn {
+  background: #7bd389;
+}
+
+#betRaiseBtn {
+  background: #6ec1ff;
+}
+
+#foldBtn {
+  background: #ff7b7b;
+}
+
+@media (max-width: 760px) {
+  .players {
+    grid-template-columns: 1fr;
+  }
+}
